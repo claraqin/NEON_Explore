@@ -85,7 +85,9 @@ ggplot(
   ) +
   geom_point() +
   theme_bw() +
-  geom_abline(a=0,b=1,linetype=3)
+  geom_abline(intercept = 0, slope = 1,linetype = 3) +
+  xlab("Measured height (m)") +
+  ylab("Modeled height (m)")
 
 
 # 3D plot comparing modeled and measured canopy heights
@@ -111,3 +113,6 @@ p <- plot_ly(
   layout(scene = list(xaxis = list(title = 'Easting'),
                       yaxis = list(title = 'Northing'),
                       zaxis = list(title = 'Height (m)')))
+
+
+# Claire Lunch's solution: https://github.com/NEONScience/NEON-Data-Skills/blob/master/tutorials-in-development/canopy-height/veg_structure_and_chm.ipynb
